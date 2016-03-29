@@ -1,0 +1,35 @@
+// Our person constructor:
+function Person (name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// perticipating persons:
+var alice = new Person("Alice", 30);
+var billy = new Person("Billy", 25);
+
+
+// the log command:
+console.log("The older person is " + olderAge(alice, billy));
+
+
+// The older function (calculate the difference of two ages):
+
+var ageDifference = function(person1, person2) {
+    return person1.age - person2.age;
+};
+
+
+// THE NEW FUNCTION (finds out the age of the oldest!)
+
+var olderAge = function(person1, person2) {
+    if (person1.age>person2.age){
+        return person1.age;
+        }
+    else if (person1.age===person2.age){
+        return person1.age;
+        }    
+    else {
+        return person2.age;
+        }
+    };
